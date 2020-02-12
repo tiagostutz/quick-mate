@@ -1,10 +1,34 @@
 version: "3"
 
 services:
+
+  nginx-cache-proxy:
+    image: flaviostutz/nginx-cache-proxy:1.9.1
+    ports:
+      - 8383:80
+      - 8443:443
+    environment:
+      - PROXY_PASS_URL=http://quick-mate:8080/
+      - SSL_DOMAIN=localhost
+      # - REQUEST_LOG_LEVEL=body
+
   quick-mate:
     build: .
     image: flaviostutz/quick-mate
     ports:
-      - 8080:8080
+      - 8484:8080
+    environment:
+      - STUN_HOST_PORT=localhost:3478
+      - TURN_HOST_PORT=localhost:3478
+      - TURN_CREDENTIAL=very_secret
     # volumes:
     #   - /Users/flaviostutz/Documents/development/flaviostutz/quick-mate/server-quick-mate/static:/app/easyrtc/server-quick-mate/static
+
+  mongooseice:
+    image: mongooseim/mongooseice:0.4.2
+    ports:
+      - 3478:3478
+    environment:
+      - MONGOOSEICE_UDP_RELAY_IP=192.168.20.12
+      - MONGOOSEICE_STUN_SECRET=very_secret
+
