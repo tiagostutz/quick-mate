@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <link rel="stylesheet" href="./assets/vendors/core/core.css">
+  <link rel="stylesheet" href="./assets/fonts/feather-font/css/iconfont.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/images/logo.png" />
+
+  <title>Quick Mate | Video chat support for your business to go. Quick Mate.</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div class="main-wrapper">
+
+    <!-- partial:./partials/_navbar.html -->
+    <div class="horizontal-menu">
+      <nav class="navbar top-navbar">
+        <div class="container">
+          <div class="navbar-content">
+            <a href="#" class="navbar-brand">
+              <img src="../../assets/images/logo.png" height="40px" class="mr-2" />Quick<span>MATE</span>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+              <i data-feather="menu"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <nav class="bottom-navbar">
+        <div class="container">
+          <ul class="nav page-navigation">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="link-icon" data-feather="file-plus"></i>
+                <span class="menu-title">Send File</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="link-icon" data-feather="video"></i>
+                <span class="menu-title">Conference</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- partial -->
+
+    <div class="page-wrapper">
+
+      <div class="page-content">
+
+      </div>
+      <div id="root"></div>
+      <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+      <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <p class="text-muted text-center text-md-left">Copyright © 2020 <a href="https://www.nobleui.com" target="_blank">QuickMATE</a>. All rights reserved</p>
+        <p class="text-muted text-center text-md-left mb-0 d-none d-md-block">Handcrafted With <i class="mb-1 text-primary ml-1 icon-small" data-feather="heart"></i></p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="./assets/vendors/core/core.js"></script>
+  <script src="./assets/vendors/feather-icons/feather.min.js"></script>
+  <script src="./assets/js/template.js"></script>
+
+</body>
+
+</html>
