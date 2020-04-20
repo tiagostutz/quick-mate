@@ -1,4 +1,4 @@
-FROM flaviostutz/easyrtc:1.1.1.0
+FROM flaviostutz/easyrtc:2.0.5.0
 
 EXPOSE 8080
 
@@ -13,9 +13,9 @@ ENV TURN_TCP_USERNAME ''
 ENV TURN_TCP_CREDENTIAL ''
 
 
-ADD /server-quick-mate /app/easyrtc/server-quick-mate
+ADD /server-quick-mate /app/open-easyrtc/server-quick-mate
 
-WORKDIR /app/easyrtc/server-quick-mate
+WORKDIR /app/open-easyrtc/server-quick-mate
 RUN npm install
 
 CMD [ "node", "server.js" ]

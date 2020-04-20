@@ -28,6 +28,22 @@ services:
   * Click "Join Conference!"
   * Here we go!
 
+## ENVs
+
+* STUN_HOST_PORT - ICE configuration for 
+
+## Production
+
+To prepare a production server with QuickMate:
+
+* Get a VM with Docker (VPSDime.com is a good cheap trial!)
+* Get a domain name (ex.: conferences.acme.com)
+* Point that domain name to the VM IP in DNS Zone
+* Launch a STUN/TURN server for more complex peer connection support (ex.: Coturn)
+* Issue a certificate for your domain (may be created automatically by Caddy Proxy with Let's Encrypt)
+* Launch QuickMate using Docker
+* For a complete example, goto to [docker-compose-production.yml](docker-compose-production.yml)
+
 
 ## Do you know jitsi.org?
 
