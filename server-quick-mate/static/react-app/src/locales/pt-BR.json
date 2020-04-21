@@ -6,6 +6,8 @@
         "Start a new meeting": "Iniciar uma nova reunião",
         "Join an existing meeting": "Entrar em uma reunião existente",
         "Send file": "Enviar arquivo",
-        "Meeting": "Reunião"
+        "Meeting": "Reunião",
+        "Meeting code eg XKO9A": "Código da reunião. Ex: GRZ1762",
+        "Your name": "Seu nome"
     }
 }

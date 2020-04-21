@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { makeid } from './common/utils.js'
+import { useState, useEffect } from "react"
+import { makeid } from '../common/utils.js'
 
 export default () => {
 
@@ -9,11 +9,14 @@ export default () => {
         let auxRoomCode = makeid(3, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         auxRoomCode += makeid(4, '0123456789')
         setRoomCode(auxRoomCode)
+        console.log(auxRoomCode);
 
-        connectToRoom(roomCode, {
-            sample: "created"
-        }, username)
+
+        // connectToRoom(roomCode, {
+        //     sample: "created"
+        // }, username)
     }
+
 
     return {
         roomCode,

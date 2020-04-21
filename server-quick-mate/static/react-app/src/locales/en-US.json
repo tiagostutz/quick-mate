@@ -6,6 +6,8 @@
         "Start a new meeting": "Start a new meeting",
         "Join an existing meeting": "Join an existing meeting",
         "Send file": "Send file",
-        "Meeting": "Meeting"
+        "Meeting": "Meeting",
+        "Meeting code eg XKO9A": "Meeting code. e.g: QDY4667",
+        "Your name": "Your name"
     }
 }
