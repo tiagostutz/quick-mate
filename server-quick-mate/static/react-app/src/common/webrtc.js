@@ -59,7 +59,7 @@ function loginSuccess() {
 }
 
 
-export const connectToRoom = (roomCode, roomParameters, username) => {
+export const connectToRoom = (roomCode, roomParameters, username, members = []) => {
     console.log("Connecting to room " + roomCode + " (" + username + ")...")
     setUsernameToLocalStorage(username)
 
@@ -72,7 +72,7 @@ export const connectToRoom = (roomCode, roomParameters, username) => {
         console.error("Username '" + username + "' invalid")
     }
 
-    window.easyrtc.easyApp("quick-mate", "box0", ["box1"], loginSuccess);
+    window.easyrtc.easyApp("quick-mate", "box0", members, loginSuccess);
     window.easyrtc.setRoomOccupantListener(callEverybodyElse);
     window.easyrtc.joinRoom(roomCode, roomParameters, function (roomCode) {
         console.log("Joined room " + roomCode + " successfully")

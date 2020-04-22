@@ -1,10 +1,9 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { makeid } from '../common/utils.js'
-import globalStore from "../common/globalStore.js"
 
 export default () => {
 
-    const [userName, setUserName] = useState(globalStore.username)
+    const [userName, setUserName] = useState(null)
     const [roomCode, setRoomCode] = useState(null)
 
     const createRoom = () => {

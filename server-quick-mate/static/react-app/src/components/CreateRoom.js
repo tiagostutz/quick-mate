@@ -21,7 +21,7 @@ function CreateRoom({ autoFocus }) {
 
     if (roomCode) {
         setTimeout(_ => {
-            window.location.href = "/" + roomCode
+            window.location.href = "/" + roomCode + "?user=" + userName
         }, 2000)
     }
 

@@ -52,3 +52,11 @@ If you need a more complete  - and a bit more complex - solution you could consi
 - https://github.com/jitsi/jitsi-meet
 - https://github.com/jitsi/jitsi-videobridge
 - https://github.com/jitsi/jibri
+
+
+## We must say thanks to them
+
+- [Vídeo de Enrique Hoyos no Pexels](https://www.pexels.com/pt-br/@enriquehoyos?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+- [Vídeo de Oleg Magni no Pexels](https://www.pexels.com/pt-br/@oleg-magni?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+- [Vídeo de cottonbro no Pexels](https://www.pexels.com/pt-br/@cottonbro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+- [Vídeo de Caleb Oquendo no Pexels](https://www.pexels.com/pt-br/@caleboquendo?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)

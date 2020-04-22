@@ -8,7 +8,7 @@ function Home() {
     const { t } = useTranslation();
 
     return (
-        <div class="page-wrapper">
+        <div className="page-wrapper">
 
             <Header />
             <div className="page-content">
