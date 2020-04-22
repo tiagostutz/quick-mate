@@ -1,13 +1,17 @@
 {
     "translation": {
         "(999) 9999-9999": "(99) 99999-9999",
+        "Join an existing meeting": "Entrar em uma reunião existente",
         "MM/DD": "DD/MM",
         "MM/DD/YYYY": "DD/MM/YYYY",
-        "Start a new meeting": "Iniciar uma nova reunião",
-        "Join an existing meeting": "Entrar em uma reunião existente",
-        "Send file": "Enviar arquivo",
         "Meeting": "Reunião",
         "Meeting code eg XKO9A": "Código da reunião. Ex: GRZ1762",
-        "Your name": "Seu nome"
+        "Meeting created opening room": "Reunião criada. Abrindo sala...",
+        "Send file": "Enviar arquivo",
+        "Start a new meeting": "Iniciar uma nova reunião",
+        "Your name": "Seu nome",
+        "Copy meeting URL": "Copiar URL da reunião",
+        "Meeting URL copied": "URL copiada",
+        "or": "ou"
     }
 }

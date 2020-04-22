@@ -1,13 +1,17 @@
 {
     "translation": {
         "(999) 9999-9999": "(999) 9999-9999",
+        "Copy meeting URL": "Copy meeting URL",
+        "Join an existing meeting": "Join an existing meeting",
         "MM/DD": "MM/DD",
         "MM/DD/YYYY": "MM/DD/YYYY",
-        "Start a new meeting": "Start a new meeting",
-        "Join an existing meeting": "Join an existing meeting",
-        "Send file": "Send file",
         "Meeting": "Meeting",
         "Meeting code eg XKO9A": "Meeting code. e.g: QDY4667",
-        "Your name": "Your name"
+        "Meeting created opening room": "Meeting created. Opening room...",
+        "Send file": "Send file",
+        "Start a new meeting": "Start a new meeting",
+        "Your name": "Your name",
+        "Meeting URL copied": "Meeting URL copied",
+        "or": "or"
     }
 }

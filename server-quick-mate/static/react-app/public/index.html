@@ -24,6 +24,7 @@
     -->
   <link rel="stylesheet" href="/assets/vendors/core/core.css">
   <link rel="stylesheet" href="/assets/fonts/feather-font/css/iconfont.css">
+  <link rel="stylesheet" href="/assets/vendors/sweetalert2/sweetalert2.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/override.css">
   <link rel="shortcut icon" href="/assets/images/logo.png" />
@@ -36,37 +37,17 @@
 
   <div class="main-wrapper">
 
-    <div class="horizontal-menu">
-      <nav class="navbar top-navbar">
-        <div class="container">
-          <div class="navbar-content">
-            <a href="#" class="navbar-brand">
-              <img src="../../assets/images/logo.png" height="40px" class="mr-2" />Quick<span>MATE</span>
-            </a>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
-              <i data-feather="menu"></i>
-            </button>
-          </div>
-        </div>
-      </nav>
 
-      <div class="page-wrapper">
+    <div id="root"></div>
 
 
-        <div id="root"></div>
-
-        <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
-          <p class="text-muted text-center text-md-left">2020 <a href="https://github.com/flaviostutz/quick-mate" target="_blank">QuickMATE</a>. MIT License</p>
-          <p class="text-muted text-center text-md-left mb-0 d-none d-md-block">Spread the <i class="mb-1 text-primary ml-1 icon-small" data-feather="heart"></i></p>
-        </footer>
-
-      </div>
-    </div>
-
-    <script src="./assets/vendors/core/core.js"></script>
-    <script src="./assets/vendors/feather-icons/feather.min.js"></script>
-    <script src="./assets/js/template.js"></script>
-
+    <script src="/assets/vendors/core/core.js"></script>
+    <script src="/assets/vendors/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/template.js"></script>
+    <script src="/assets/js/socket.io.js"></script>
+    <script src="/assets/js/easyrtc.js"></script>
+    <script src="/assets/vendors/sweetalert2/sweetalert2.min.js"></script>
+  </div>
 </body>
 
 </html>
