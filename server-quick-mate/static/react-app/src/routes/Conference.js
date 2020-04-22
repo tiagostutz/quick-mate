@@ -16,7 +16,7 @@ function Conference() {
 
                 <VideoConference />
 
-            </div >
+            </div>
             <div className="horizontal-menu">
                 <nav className="bottom-navbar">
                     <div className="container">

@@ -40,7 +40,7 @@ video {
     background: black;
 }
 .video-wrapper .video-container video{
-    margin-top: -9px;    
+    margin-bottom: -9px;    
 }
 
 .video-wrapper .video-container video.off{
@@ -52,8 +52,20 @@ video {
 }
 
 
+.horizontal-menu .bottom-navbar {
+    bottom: 0px;
+    background: rgba(255,255,255,0.2);
+    transition: background-color .25s ease-in-out;
+}
+.horizontal-menu .bottom-navbar:hover {
+    background: white;
+}
+
 @media (max-width: 991px) {
     .page-wrapper {
         margin-top: 0px;
+    }
+    .horizontal-menu .bottom-navbar {
+        background: white;
     }
 }

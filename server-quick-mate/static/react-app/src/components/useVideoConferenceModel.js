@@ -15,9 +15,9 @@ export default () => {
 
     useEffect(() => {
         if (roomCode) {
-            // connectToRoom(roomCode, {
-            //     sample: "created"
-            // }, userName)
+            connectToRoom(roomCode, {
+                sample: "created"
+            }, userName)
         }
     }, [roomCode, setUserName])
 
