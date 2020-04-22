@@ -9,15 +9,19 @@ export default () => {
     const { roomCode } = useParams()
 
     const [userName, setUserName] = useState(query.get("user"))
-    const [participants, setParticipants] = useState(["1", "2", "3", "4", "5", "6"])
+    const [participants, setParticipants] = useState(["1", "2"])
 
     console.log("===>>>", userName, roomCode);
 
     useEffect(() => {
         if (roomCode) {
             connectToRoom(roomCode, {
-                sample: "created"
-            }, userName)
+                sample: userName == "Julia" ? "joined" : "created"
+            }, userName, ["box1"], (msgType, content) => {
+                console.log("--@@@@", msgType);
+                window.document.querySelector("#box1").style.display = "none"
+                window.document.querySelector("#box1Coffee").style.display = "block"
+            })
         }
     }, [roomCode, setUserName])
 

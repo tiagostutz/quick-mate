@@ -15,6 +15,9 @@ function VideoConference() {
     const colMD = participants.length > 2 ? "col-md-6" : "col-md-12"
     const colLG = participants.length > 4 ? "col-lg-4" : "col-lg-6"
 
+    const rightBackVideos = ["/assets/video/swimming-pool.mp4", "/assets/video/coffee-work.mp4", "/assets/video/browsing-mac.mp4", "/assets/video/times-square.mp4", "/assets/video/browsing-mac.mp4"]
+    const rightBackVideo = rightBackVideos[Math.round(Math.random() * 3)]
+
     return <div className="row row-no-gutters">
 
         <div className="row row-no-gutters">
@@ -29,11 +32,12 @@ function VideoConference() {
                     playsInline="playsinline"></video>
             </div>
             <div className={`col-xs-12 col-sm-6 ${colMD} ${colLG} video-container`}>
-                <video autoPlay loop>
-                    <source src="/assets/video/swimming-pool.mp4" type="video/mp4" />
+                <video id="box1"></video>
+                <video id="box1Coffee" autoPlay loop style={{ display: "none", filter: "grayscale(1)" }}>
+                    <source src={rightBackVideo} type="video/mp4" />
                 </video>
             </div>
-            <div className={`col-xs-12 col-sm-6 ${colMD} ${colLG} video-container`}>
+            {/* <div className={`col-xs-12 col-sm-6 ${colMD} ${colLG} video-container`}>
                 <video autoPlay loop>
                     <source src="/assets/video/city-tour.mp4" type="video/mp4" />
                 </video>
@@ -43,8 +47,8 @@ function VideoConference() {
                 <video autoPlay loop>
                     <source src="/assets/video/coffee-work.mp4" type="video/mp4" />
                 </video>
-            </div>
-            <div className={`col-xs-12 col-sm-6 ${colMD} ${colLG} video-container`}>
+            </div> */}
+            {/* <div className={`col-xs-12 col-sm-6 ${colMD} ${colLG} video-container`}>
                 <video autoPlay loop>
                     <source src="/assets/video/browsing-mac.mp4" type="video/mp4" />
                 </video>
@@ -53,7 +57,7 @@ function VideoConference() {
                 <video autoPlay loop>
                     <source src="/assets/video/times-square.mp4" type="video/mp4" />
                 </video>
-            </div>
+            </div> */}
         </div>
 
     </div>

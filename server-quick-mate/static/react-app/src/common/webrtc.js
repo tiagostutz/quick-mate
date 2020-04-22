@@ -1,17 +1,10 @@
 var maxCALLERS = 3;
 let ok = true
 
-function getUsernameFromLocalStorage() {
-    return window.localStorage.getItem("quick-mate::username");
-}
-function setUsernameToLocalStorage(username) {
-    return window.localStorage.setItem("quick-mate::username", username);
-}
-
 window.easyrtc.setSocketUrl(":8484");
 
 function callEverybodyElse(roomName, otherPeople) {
-    console.log("callEverybodyElse() roomName=" + roomName + "; ortherPeople=" + otherPeople)
+    console.log("callEverybodyElse() roomName=" + roomName + "; orherPeople=", otherPeople)
     window.easyrtc.setRoomOccupantListener(null); // so we're only called once.
 
     var list = [];
@@ -44,24 +37,14 @@ function callEverybodyElse(roomName, otherPeople) {
     }
 }
 
-
-function messageListener(easyrtcid, msgType, content) {
-    for (var i = 0; i < maxCALLERS; i++) {
-        if (window.easyrtc.getIthCaller(i) === easyrtcid) {
-            console.log(">> easyrtcid", easyrtcid, " | msgType", msgType, " | content", content);
-        }
-    }
-}
-
 function loginSuccess() {
     console.log("=>> loginSuccess!");
 
 }
 
 
-export const connectToRoom = (roomCode, roomParameters, username, members = []) => {
-    console.log("Connecting to room " + roomCode + " (" + username + ")...")
-    setUsernameToLocalStorage(username)
+export const connectToRoom = (roomCode, roomParameters, username, members = [], onMessageReceived) => {
+    console.log("Connecting to room " + roomCode + " (" + username + ")... | roomParameters:", roomParameters)
 
     window.easyrtc.hangupAll();
     window.easyrtc.dontAddCloseButtons(true);
@@ -79,7 +62,16 @@ export const connectToRoom = (roomCode, roomParameters, username, members = []) 
     }, function (errorCode, errorText, roomCode) {
         console.log("Failed to join room " + roomCode + ". code=" + errorCode + "; error=" + errorText)
     })
-    window.easyrtc.setPeerListener(messageListener);
+    window.easyrtc.setPeerListener((easyrtcid, msgType, content) => {
+        for (var i = 0; i < maxCALLERS; i++) {
+            if (window.easyrtc.getIthCaller(i) === easyrtcid) {
+                console.log(">> easyrtcid", easyrtcid, " | msgType", msgType, " | content", content);
+                if (onMessageReceived) {
+                    onMessageReceived(msgType, content)
+                }
+            }
+        }
+    });
     window.easyrtc.setDisconnectListener(function () {
         window.easyrtc.showError("LOST-CONNECTION", "Lost connection to signaling server");
     });

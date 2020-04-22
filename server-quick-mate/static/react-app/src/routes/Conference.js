@@ -2,11 +2,14 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '../partials/Header';
 import VideoConference from '../components/VideoConference';
+import useConferenceModel from './useConferenceModel';
 
 
 function Conference() {
 
     const { t } = useTranslation();
+
+    const { notifyIllBeRightBack } = useConferenceModel()
 
     return <>
         <div className="page-wrapper">
@@ -21,16 +24,17 @@ function Conference() {
                 <nav className="bottom-navbar">
                     <div className="container">
                         <ul className="nav page-navigation">
-                            <li className="nav-item">
+
+                            <li className="nav-item" onClick={_ => notifyIllBeRightBack()}>
                                 <span className="nav-link actionable">
-                                    <i className="link-icon" data-feather="file-plus"></i>
-                                    <span className="menu-title">{t("Send File")}</span>
+                                    <i className="link-icon" data-feather="coffee"></i>
+                                    <span className="menu-title">{t("I'll be right back")}</span>
                                 </span>
                             </li>
                             <li className="nav-item">
                                 <span className="nav-link actionable">
-                                    <i className="link-icon" data-feather="video"></i>
-                                    <span className="menu-title">{t("Conference")}</span>
+                                    <i className="link-icon" data-feather="file-plus"></i>
+                                    <span className="menu-title">{t("Send file")}</span>
                                 </span>
                             </li>
                         </ul>

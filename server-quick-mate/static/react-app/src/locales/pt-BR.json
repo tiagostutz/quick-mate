@@ -8,10 +8,12 @@
         "Meeting code eg XKO9A": "Código da reunião. Ex: GRZ1762",
         "Meeting created opening room": "Reunião criada. Abrindo sala...",
         "Send file": "Enviar arquivo",
+        "Meeting Code": "Código da reunião",
         "Start a new meeting": "Iniciar uma nova reunião",
         "Your name": "Seu nome",
         "Copy meeting URL": "Copiar URL da reunião",
         "Meeting URL copied": "URL copiada",
+        "I'll be right back": "Já volto!",
         "or": "ou"
     }
 }

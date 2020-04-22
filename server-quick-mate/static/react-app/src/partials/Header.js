@@ -21,7 +21,7 @@ function Header() {
                         <img alt="QuickMate Logo" src="../../assets/images/logo.png" height="40px" className="mr-2" />Quick<span>MATE</span>
                     </a>
                     <span> <i data-feather="smile" style={{ height: "1rem" }} ></i> {userName}</span>
-                    <span>Código da reunião: <strong className="ml-1">{roomCode}
+                    <span>{t("Meeting Code")}: <strong className="ml-1">{roomCode}
                         <ClickFeedbackIconTooltip hoverText={t("Copy meeting URL")} clickedText={t("Meeting URL copied")} />
                     </strong>
                     </span>
