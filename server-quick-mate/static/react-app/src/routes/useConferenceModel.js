@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default () => {
 
     const notifyIllBeRightBack = () => {
@@ -9,7 +11,17 @@ export default () => {
         }
     }
 
+    const sendMerchandisingURL = (merchandisingURL) => {
+        for (var i = 0; i < 6; i++) {
+            var easyrtcid = window.easyrtc.getIthCaller(i);
+            if (easyrtcid && easyrtcid != "") {
+                window.easyrtc.sendPeerMessage(easyrtcid, "merchan", merchandisingURL);
+            }
+        }
+    }
+
     return {
-        notifyIllBeRightBack
+        notifyIllBeRightBack,
+        sendMerchandisingURL
     }
 }

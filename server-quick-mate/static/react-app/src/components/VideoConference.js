@@ -9,7 +9,8 @@ function VideoConference() {
     const {
         roomCode,
         userName,
-        participants
+        participants,
+        merchandisingURL
     } = useVideoConferenceModel()
 
     const colMD = participants.length > 2 ? "col-md-6" : "col-md-12"
@@ -32,10 +33,16 @@ function VideoConference() {
                     playsInline="playsinline"></video>
             </div>
             <div className={`col-xs-12 col-sm-6 ${colMD} ${colLG} video-container`}>
-                <video id="box1"></video>
-                <video id="box1Coffee" autoPlay loop style={{ display: "none", filter: "grayscale(1)" }}>
-                    <source src={rightBackVideo} type="video/mp4" />
-                </video>
+                {!merchandisingURL && <>
+                    <video id="box1Coffee" autoPlay loop style={{ display: "none", filter: "grayscale(1)" }}>
+                        <source src={rightBackVideo} type="video/mp4" />
+                    </video>
+                    <video id="box1"></video>
+                </>
+                }
+                {merchandisingURL &&
+                    <iframe width="460" height="315" src={`https://www.youtube.com/embed/${merchandisingURL}?controls=0;autoplay=1;mute=1`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                }
             </div>
             {/* <div className={`col-xs-12 col-sm-6 ${colMD} ${colLG} video-container`}>
                 <video autoPlay loop>

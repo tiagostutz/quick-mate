@@ -10,6 +10,7 @@ export default () => {
 
     const [userName, setUserName] = useState(query.get("user"))
     const [participants, setParticipants] = useState(["1", "2"])
+    const [merchandisingURL, setMerchandisingURL] = useState("")
 
     console.log("===>>>", userName, roomCode);
 
@@ -20,7 +21,12 @@ export default () => {
             }, userName, ["box1"], (msgType, content) => {
                 console.log("--@@@@", msgType);
                 window.document.querySelector("#box1").style.display = "none"
-                window.document.querySelector("#box1Coffee").style.display = "block"
+                window.document.querySelector("#box1Coffee").style.display = "none"
+                if (msgType === "merchan") {
+                    setMerchandisingURL(content.match(/(\?v=)(.*)/i)[2])
+                } else {
+                    window.document.querySelector("#box1Coffee").style.display = "block"
+                }
             })
         }
     }, [roomCode, setUserName])
@@ -29,6 +35,7 @@ export default () => {
     return {
         userName,
         roomCode,
-        participants
+        participants,
+        merchandisingURL
     }
 }
